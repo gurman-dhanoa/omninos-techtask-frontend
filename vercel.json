@@ -1,8 +1,0 @@
-{
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "https://omninos-techtask-backend.vercel.app/api/$1"
-      }
-    ]
-  }
