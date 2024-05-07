@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { logoutUser } from '../store/userActions'
 import {logout} from "./../store/authSlice"
-import CreatePost from './CreatePost'
 
 const Header = () => {
   const authStatus = useSelector((state) => state.auth.status)
@@ -49,7 +48,7 @@ const UserMenu = () => {
       
       <MenuList>
         <Link to={"/profile"}><MenuItem>Profile</MenuItem></Link>
-        <CreatePost/>
+        <Link to={"/create-post"}><MenuItem>Create Post</MenuItem></Link>
         <MenuItem onClick={logoutHandler}>Logout</MenuItem>
       </MenuList>
     </Menu>

@@ -94,14 +94,14 @@ const Auth = () => {
             <FormLabel>Email address</FormLabel>
             <Input type='email' {...register("email")} />
           </FormControl>
-          {!loginState && <FormControl isRequired>
+          {!loginState && <><FormControl isRequired>
             <FormLabel>Full Name</FormLabel>
             <Input type='text' {...register("fullName")} />
-          </FormControl>}
+          </FormControl>
           <FormControl isRequired>
             <FormLabel>Username</FormLabel>
             <Input type='text' {...register("username")} />
-          </FormControl>
+          </FormControl></>}
           <FormControl isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup size='md'>

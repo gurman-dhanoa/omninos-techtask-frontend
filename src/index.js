@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import store from './store/store'
 import Profile from "./pages/Profile";
 import PostDetails from "./pages/PostDetails";
+import CreatePost from "./pages/CreatePost";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication={true}>
             <Profile />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/create-post",
+        element: (
+          <AuthLayout authentication={true}>
+            <CreatePost />
           </AuthLayout>
         ),
       },

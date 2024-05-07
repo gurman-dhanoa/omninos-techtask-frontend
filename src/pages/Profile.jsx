@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { fetchUserPosts, getUser } from '../store/userActions';
 import { login, logout } from '../store/authSlice';
 import { updatePosts } from '../store/postsSlice';
