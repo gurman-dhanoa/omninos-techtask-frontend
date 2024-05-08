@@ -44,6 +44,12 @@ const Auth = () => {
         })
       } else {
         dispatch(logout());
+        toast({
+          title:'Error occured !!',
+          description: userData?.payload?.errorMessage || 'Please try again',
+          duration: 5000,
+          isClosable: true,
+        })
       }
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -74,7 +80,8 @@ const Auth = () => {
       } else {
         dispatch(logout());
         toast({
-          description: 'Kindly join the website',
+          title:'Error occured !!',
+          description: userData?.payload?.errorMessage || 'Please try again',
           duration: 5000,
           isClosable: true,
         })
